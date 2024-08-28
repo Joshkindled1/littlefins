@@ -31,9 +31,25 @@
         }
 
         .scroll {
-            height: 500px;
+            height: 450px;
             overflow: auto;
-            padding: 20px;
+            margin-top: 10px;
+        }
+        .nav-icons{
+            color: #f3d63c;
+        }
+        .heading{
+            color: #694e4d;
+        }
+        .rewards-nav{
+            color: #694e4d;
+            text-decoration: none;
+        }
+        .rewards-nav :hover{
+            text-decoration: underline 3px #f09744;
+        }
+        .rewards-nav :active{
+            text-decoration: underline 3px #f09744;
         }
     </style>
 </head>
@@ -43,18 +59,18 @@
         <img src="images/logo.png" alt="Logo" class="logo">
         <ul class="ms-auto list-unstyled d-flex gap-3 px-3">
             <li><a href="#" class="px-5 py-2 ply-btn text-white rounded-4 text-decoration-none fw-bold">Play</a></li>
-            <li class="fa fa-bell fa-2x text-white"></li>
-            <li class="fa fa-circle-user fa-2x text-white"></li>
-            <li class="fa fa-bars fa-2x text-white"></li>
+            <li class="nav-icons fa fa-bell fa-2x"></li>
+            <li class="nav-icons fa fa-circle-user fa-2x"></li>
+            <li class="nav-icons fa fa-bars fa-2x"></li>
         </ul>
     </nav>
 
-    <div class="col-12 d-flex justify-content-center text-uppercase fw-bold h4 mt-3">My account</div>
+    <div class="col-12 d-flex justify-content-center text-uppercase fw-bold h4 mt-3 heading">My account</div>
 
     <div class="container">
         <div class="row mt-3">
             <div class="col-md-3 m-3">
-                <div class="d-flex justify-content-center fw-bolder text-white">Hello, Smarty!</div>
+                <div class="d-flex justify-content-center fw-bolder text-white fs-4">Hello, Smarty!</div>
                 <div class="fa-solid fa-circle-user d-flex justify-content-center text-white fa-5x mt-3"></div>
 
                 <div class="bg-white mt-3 rounded-5 d-flex flex-column align-items-center p-4">
@@ -64,39 +80,42 @@
                 </div>
             </div>
 
-            <div class="col-md-4 bg-white rounded-5 container scroll">
-                <ul class="list-unstyled d-flex gap-4 justify-content-center fw-bold mt-3">
-                    <a href="">
-                        <li>Rewards</li>
+            <div class="col-md-4 bg-white rounded-5 container overflow-hidden">
+                <div class="scroll">
+                    <ul class="list-unstyled d-flex gap-4 justify-content-center fw-bold mt-3">
+                        <a href="" class="rewards-nav">
+                            <li>Rewards</li>
+                        </a>
+                        <a href="" class="rewards-nav">
+                            <li>Wallet</li>
+                        </a>
+                        <a href="" class="rewards-nav">
+                            <li>History</li>
+                        </a>
+                    </ul>
+                    <div class="form-check d-flex align-items-center justify-content-center">
+                        <input class="form-check-input" type="radio" name="amazon" id="amazon" value="amazon">
+                        <img src="images/amazon.png" alt="" class="mx-2">
+                    </div>
+                    <p class="d-flex justify-content-center fw-bold">$5.00</p>
+    
+                    <div class="form-check d-flex align-items-center justify-content-center mt-5">
+                        <input class="form-check-input" type="radio" name="amazon" id="amazon" value="amazon">
+                        <img src="images/popular.png" alt="" class="mx-2">
+                    </div>
+                    <p class="d-flex justify-content-center fw-bold">$5.00</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="px-3 py-2 redeem-btn rounded-4 text-decoration-none text-black">Redeem</a>
+                    </div>
+                    <a href="#">
+                        <p class="d-flex justify-content-center mt-2">View more</p>
                     </a>
-                    <a href="">
-                        <li>Wallet</li>
-                    </a>
-                    <a href="">
-                        <li>History</li>
-                    </a>
-                </ul>
-                <div class="form-check d-flex align-items-center justify-content-center">
-                    <input class="form-check-input" type="radio" name="amazon" id="amazon" value="amazon">
-                    <img src="images/amazon.png" alt="" class="mx-2">
                 </div>
-                <p class="d-flex justify-content-center fw-bold">$5.00</p>
 
-                <div class="form-check d-flex align-items-center justify-content-center mt-5">
-                    <input class="form-check-input" type="radio" name="amazon" id="amazon" value="amazon">
-                    <img src="images/popular.png" alt="" class="mx-2">
-                </div>
-                <p class="d-flex justify-content-center fw-bold">$5.00</p>
-                <div class="d-flex justify-content-center">
-                    <a href="#" class="px-3 py-2 redeem-btn rounded-4 text-decoration-none text-black">Redeem</a>
-                </div>
-                <a href="#">
-                    <p class="d-flex justify-content-center mt-3">View more</p>
-                </a>
             </div>
 
             <div class="col-md-4 m-3 bg-white rounded-5">
-                <p class="fw-bold d-flex justify-content-center mt-3">Your Activity</p>
+                <p class="fw-bold d-flex justify-content-center mt-3 heading">Your Activity</p>
                 <img src="images/activity.png" alt="" class="img-fluid">
             </div>
         </div>
