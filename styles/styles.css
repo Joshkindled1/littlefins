@@ -16,6 +16,7 @@ html {
 
 body{
   background-color: #6dc1dc !important
+
 }
 
 .btn-primary {
@@ -38,14 +39,7 @@ body{
   box-shadow: .1rem .3rem .5rem rgba(0, 0, 0, 0.5);
 }
 
-/* banner colours */
-.homebanner {
-  min-height: 50dvh;
-  background-image: url("../img/sneaker.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .homebanner h1,
 .homebanner h4 {
@@ -67,18 +61,6 @@ body{
   border: none 
 }
 
-.homepage-card img {
-  width: 100%;
-  min-height: 25;
-  height: auto;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url("../img/imgplaceholder.png");
-  /* text-indent: -9999px; */
-  /* remove or comment out text indent if all images are available */
-}
-
 .img-fluid{
   height:100px !important;
   width:auto !important;
@@ -94,3 +76,60 @@ body{
   font-size:1.75rem !important;
   height: auto !important;
 }
+
+.midSection{
+  height:100%;
+  width : auto;
+}
+
+.mainpagetext{
+  background-color: #f3d64c;
+  border: 0.5rem solid white;
+  display: flex ;
+  height: 100% !important;
+  width: auto !important;
+}
+
+.mainpagetext h1{
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3.5rem;
+  font-style: bold;
+  padding:0.5rem;
+  letter-spacing: -0.09rem;
+}
+
+.fishText p{
+  font-size: 2rem;
+}
+
+.startButton{
+  padding-left: 4 !important;
+  text-align: center;
+  align-items: center;
+}
+
+.startButton button{
+  background-color: #ff912a;
+
+}
+
+.startButton h2{
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0rem 2rem
+}
+
+
+
+
+.mainFishImg{
+  max-height: 75% !important;
+  width: auto !important;
+
+  background-color: black;
+
+}
+
