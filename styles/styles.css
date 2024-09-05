@@ -6,6 +6,8 @@ body {
   margin: 0; */
 }
 
+/********************** nav ***********************/
+
 .logo {
   width: 180px;
   height: auto;
@@ -15,6 +17,67 @@ body {
   color: #f3d63c;
 }
 
+.navbar-toggler {
+  border-color: #f3d63c;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(243, 214, 60, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+  outline: none; 
+  border-color: #f3d63c; /* Border color when active */
+  box-shadow: 0 0 0 0.25rem rgba(243, 214, 60, 0.5); 
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff; 
 }
+
+.width-fixed{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/********************** profile page ***********************/
+.yellow-bg{
+  background-color: #f3d63c;
+}
+
+.rewards-img{
+  max-width: 100%;
+  height: auto;
+}
+
+.brown-text{
+  color: #694e4d;
+}
+
+.orange-bg{
+  background-color: #ff912a;
+}
+
+.orange-border{
+  border: #ff912a 3px solid
+}
+
+.circle {
+  width: 100px; 
+  height: 100px; 
+  background-color: #f3d63c; 
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem; 
+}
+
+
+/* Styles for devices smaller than 768px (mobile) */
+@media screen and (max-width: 768px){
+  .desktopProfile{
+    display: none;
+  }
+
+} 
