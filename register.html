@@ -71,14 +71,14 @@
                     <div class="container-sm">
 
                         <div>
-                            <h1 class="display-4 text-white fw-lighter text-center">Login</h1>
+                            <h1 class="display-4 text-black fw-bold text-center">Login</h1>
                         </div>
 
                         <form id="formLogin" class="needs-validation" novalidate>
                             <!-- Email input -->
                             <div class="row justify-content-center">
                                 <div class="col-8">
-                                    <label class="form-label text-white fw-lighter" for="txtEmail">Email:</label>
+                                    <label class="form-label text-black fw-bold" for="txtEmail">Email:</label>
                                     <input type="email" id="txtEmail" class="form-control" required />
                                     <div class="invalid-feedback text-white">
                                         Please enter a valid email.
@@ -89,7 +89,7 @@
                             <!-- Username input -->
                             <div class="row justify-content-center">
                                 <div class="col-8">
-                                    <label class="form-label text-white fw-lighter" for="txtUsername">Username:</label>
+                                    <label class="form-label text-black fw-bold mt-2" for="txtUsername">Username:</label>
                                     <input type="username" id="txtUsername" class="form-control" required />
                                     <div class="invalid-feedback text-white">
                                         Please enter a valid username.
@@ -100,19 +100,28 @@
 
                             <div>
                                 <!-- Password and DoB input -->
-                                <div class=" row-cols-1 justify-content-center">
-                                    <div>
+                                <div class=" row justify-content-center">
+                                    <div class="col-8">
                                         <div>
 
-                                            <label class="form-label text-white fw-lighter" for="txtPassword">Password:</label>
+                                            <label class="form-label text-black fw-bold" for="txtPassword">Password:</label>
                                             <input type="password" id="txtPassword" class="form-control" required />
                                             <div class="invalid-feedback text-white">
                                                 Please enter a password.
                                             </div>
                                             
                                         </div>
+                                        <div>
 
-                                        <div class="mt-2">
+                                            <label class="form-label text-black fw-bold" for="txtcPassword">Re-enter your password:</label>
+                                            <input type="password" id="txtcPassword" class="form-control" required />
+                                            <div class="invalid-feedback text-white">
+                                                Please confirm your password.
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="mt-3">
                                             <form id="dateForm">
                                                 <label for="birthday">Select your birthday:</label>
                                                 <input type="date" id="birthday" name="birthday">
@@ -133,7 +142,7 @@
                         <div class="d-flex justify-content-center pt-4">
                             <button type="submit" id="btnLogin" class="btn btn-primary btn-block ms-2">
 
-                                Login</button>
+                                Create</button>
 
                             <button type="reset" id="btnReset" class="btn btn-secondary btn-block ms-2">Reset</button>
                         </div>
@@ -171,12 +180,12 @@
 
             const email = document.getElementById("txtEmail");                      // Create constant variables to capture form inputs - txtEmail
             const pwd = document.getElementById("txtPassword");                     // Create constant variables to capture form inputs - txtPassword
-            const dob = document.getElementById("txtDoB")
-
+            const pwd2 = document.getElementById("txtcPassword");
+            const dob = document.getElementById("dateForm")
             const toastElement = document.getElementById("msg-toast");              // Get the toast element - msg-toast
             const toastBodyElement = document.getElementById("msg-toast-body");     // Get the toast element - msg-toast-body
 
-            if (isEmpty(email.value) || isEmpty(pwd.value)) {                         // Trap empty inputs for txtEmail and txtPassword - isEmpty()
+            if (isEmpty(email.value) || isEmpty(pwd.value) || isEmpty(pwd2)) {                         // Trap empty inputs for txtEmail and txtPassword - isEmpty()
                 showToast({
                     toastElement,
                     toastBodyElement,
@@ -193,14 +202,14 @@
                 });
                 return;
             }
-            if (!isDoB(dob.value)) {                                              // Trap invalid email for txtEmail - isEmail()
-                showToast({
-                    toastElement,
-                    toastBodyElement,
-                    bgColor: "danger", msg: "doB is invalid."
-                });
-                return;
-            }
+            // if (!isDoB(dob.value)) {                                              // Trap invalid email for txtEmail - isEmail()
+            //     showToast({
+            //         toastElement,
+            //         toastBodyElement,
+            //         bgColor: "danger", msg: "doB is invalid."
+            //     });
+            //     return;
+            // }
 
             spinner.createSpinner("btnLogin");
             spinner.displaySpinner(true);
@@ -212,9 +221,11 @@
                 spinner.displaySpinner(false);//if login unsucessful, hide spinner
                 showToast({ toastElement, toastBodyElement, bgColor: "danger", msg: "Unable to login. Please try again." });
             }                                           // Invoke login() function, and end (return)
+            console.print(dateForm)
         });
-
+        
     </script>
+
 </body>
 
 </html>
