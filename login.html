@@ -16,14 +16,15 @@
 </head>
 
 <body>
-        <!-- toast -->
-    <!-- https://getbootstrap.com/docs/5.3/components/toasts/ --> 
+    <!-- toast -->
+    <!-- https://getbootstrap.com/docs/5.3/components/toasts/ -->
     <div class="toast-container p-3 top-0 start-50 translate-middle-x">
         <!-- Put toasts within -->
-        <div id="msg-toast" class="toast align-items-center mt-2" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="true" data-bs-delay="4000">
+        <div id="msg-toast" class="toast align-items-center mt-2" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="true" data-bs-delay="4000">
             <div class="d-flex">
-                <div id="msg-toast-body" class="toast-body"> 
-                <!-- Message to be added here -->
+                <div id="msg-toast-body" class="toast-body">
+                    <!-- Message to be added here -->
                 </div>
                 <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
@@ -52,64 +53,65 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             </div>
         </nav>
-   
-
-    <!-- main page fish -->
-    <div class="midSection row col-sm-12 mt-4 ">
 
 
-        <!-- Main page fish -->
-        <div class="mainFish d-flex flex-column align-items-end mt-auto col-md-5">
-            <img class="mainOctImg" src="images/octopus.png" alt="">
-        </div>
-        <!-- main page text -->
-        <div class="d-flex flex-column col-md-6">
+        <!-- main page fish -->
+        <div class="midSection row col-sm-12 mt-4 ">
 
-            <div class="mainpagetext d-flex row col-sm rounded-5 align-content-md-center my-auto p-4">
-                <!-- Container for Login form -->
-                <div class="container">
 
-                    <div>
-                        <h1 class="display-4 text-black fw-bold text-center">Login</h1>
-                    </div>
-
-                    <form id="formLogin" class="needs-validation" novalidate>
-                        <!-- Email input -->
-                        <div class="row justify-content-center">
-                            <div class="col-8">
-                                <label class="form-label text-white fw-lighter" for="txtEmail">Email:</label>
-                                <input type="email" id="txtEmail" class="form-control" required />
-                                <div class="invalid-feedback text-white">
-                                    Please enter a valid email.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Message input -->
-                        <div class="row justify-content-center">
-                            <div class="col-8">
-                                <label class="form-label text-black fw-lighter" for="txtPassword">Password:</label>
-                                <input type="password" id="txtPassword" class="form-control" required />
-                                <div class="invalid-feedback text-white">
-                                    Please enter a password.
-                                </div>
-                                <a href="register.html"> Don't have an account? Sign up here.</a>
-                            </div>
-                        </div>
-                        <!-- Submit button -->
-                        <div class="d-flex justify-content-center pt-4">
-                            <button type="submit" id="btnLogin" class="btn btn-primary btn-block ms-2">
-
-                                Login</button>
-
-                            <button type="reset" id="btnReset" class="btn btn-secondary btn-block ms-2">Reset</button>
-                        </div>
-                    </form>
-
-                </div>
-                <!-- End of Container for Contact form -->
+            <!-- Main page fish -->
+            <div class="mainFish d-flex flex-column align-items-end mt-auto col-md-5">
+                <img class="mainOctImg" src="images/octopus.png" alt="">
             </div>
-        </div> 
+            <!-- main page text -->
+            <div class="d-flex flex-column col-md-6">
+
+                <div class="mainpagetext d-flex row col-sm rounded-5 align-content-md-center my-auto p-4">
+                    <!-- Container for Login form -->
+                    <div class="container">
+
+                        <div>
+                            <h1 class="display-4 text-black text-center">Login</h1>
+                        </div>
+
+                        <form id="formLogin" class="needs-validation" novalidate>
+                            <!-- Email input -->
+                            <div class="row justify-content-center">
+                                <div class="col-8">
+                                    <label class="form-label text-black fw-bolder" for="txtEmail">Email:</label>
+                                    <input type="email" id="txtEmail" class="form-control" required />
+                                    <div class="invalid-feedback text-white">
+                                        Please enter a valid email.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message input -->
+                            <div class="row justify-content-center">
+                                <div class="col-8">
+                                    <label class="form-label text-black fw-bolder" for="txtPassword">Password:</label>
+                                    <input type="password" id="txtPassword" class="form-control" required />
+                                    <div class="invalid-feedback text-white">
+                                        Please enter a password.
+                                    </div>
+                                    <a href="register.html"> Don't have an account? Sign up here.</a>
+                                </div>
+                            </div>
+                            <!-- Submit button -->
+                            <div class="d-flex justify-content-center pt-4">
+                                <button type="submit" id="btnLogin" class="btn btn-primary btn-block ms-2">
+
+                                    Login</button>
+
+                                <button type="reset" id="btnReset"
+                                    class="btn btn-secondary btn-block ms-2">Reset</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- End of Container for Contact form -->
+                </div>
+            </div>
 
         </div>
     </div>

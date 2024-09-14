@@ -180,7 +180,7 @@
 
             const email = document.getElementById("txtEmail");                      // Create constant variables to capture form inputs - txtEmail
             const pwd = document.getElementById("txtPassword");                     // Create constant variables to capture form inputs - txtPassword
-            const pwd2 = document.getElementById("txtcPassword");
+            const pwd2 = document.getElementById("txtcPassword");                   // Create constant variable to capture form inputs -txtcPassword
             const dob = document.getElementById("dateForm")
             const toastElement = document.getElementById("msg-toast");              // Get the toast element - msg-toast
             const toastBodyElement = document.getElementById("msg-toast-body");     // Get the toast element - msg-toast-body
@@ -202,14 +202,26 @@
                 });
                 return;
             }
-            // if (!isDoB(dob.value)) {                                              // Trap invalid email for txtEmail - isEmail()
-            //     showToast({
-            //         toastElement,
-            //         toastBodyElement,
-            //         bgColor: "danger", msg: "doB is invalid."
-            //     });
-            //     return;
-            // }
+
+
+            if (!isPassword(pwd.value)) {                                              // Trap invalid email for txtEmail - isEmail()
+                showToast({
+                    toastElement,
+                    toastBodyElement,
+                    bgColor: "danger", msg: "Min 8 Characters, 1 Uppercase and 1 Special character"
+                });
+                return;
+            }
+
+            if (txtPassword != txtcPassword) {                                              // Trap invalid email for txtEmail - isEmail()
+                showToast({
+                    toastElement,
+                    toastBodyElement,
+                    bgColor: "danger", msg: "Passwords do not match"
+                });
+                return;
+            }
+
 
             spinner.createSpinner("btnLogin");
             spinner.displaySpinner(true);
